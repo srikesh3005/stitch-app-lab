@@ -47,6 +47,34 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Custom automotive system colors
+        electric: {
+          DEFAULT: "hsl(var(--electric-blue))",
+          glow: "hsl(var(--electric-blue-glow))",
+        },
+        system: {
+          DEFAULT: "hsl(var(--system-green))",
+          glow: "hsl(var(--system-green-glow))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning-orange))",
+          glow: "hsl(var(--warning-orange-glow))",
+        },
+        danger: {
+          DEFAULT: "hsl(var(--danger-red))",
+          glow: "hsl(var(--danger-red-glow))",
+        },
+        status: {
+          active: "hsl(var(--status-active))",
+          warning: "hsl(var(--status-warning))",
+          error: "hsl(var(--status-error))",
+          inactive: "hsl(var(--status-inactive))",
+        },
+        display: {
+          bg: "hsl(var(--display-bg))",
+          border: "hsl(var(--display-border))",
+          text: "hsl(var(--display-text))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -80,10 +108,42 @@ export default {
             height: "0",
           },
         },
+        "pulse-electric": {
+          "0%, 100%": {
+            boxShadow: "0 0 0 0 hsl(var(--electric-blue) / 0.7)",
+          },
+          "70%": {
+            boxShadow: "0 0 0 10px hsl(var(--electric-blue) / 0)",
+          },
+        },
+        "pulse-system": {
+          "0%, 100%": {
+            boxShadow: "0 0 0 0 hsl(var(--system-green) / 0.7)",
+          },
+          "70%": {
+            boxShadow: "0 0 0 10px hsl(var(--system-green) / 0)",
+          },
+        },
+        "data-flow": {
+          "0%": {
+            transform: "translateX(-100%)",
+            opacity: "0",
+          },
+          "50%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translateX(100%)",
+            opacity: "0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-electric": "pulse-electric 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "pulse-system": "pulse-system 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "data-flow": "data-flow 3s ease-in-out infinite",
       },
     },
   },

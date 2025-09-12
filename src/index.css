@@ -8,35 +8,72 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 5% 6%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 200 98% 39%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 5% 6%;
+    --muted-foreground: 240 4% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 120 60% 50%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 240 6% 10%;
+    --input: 240 6% 10%;
+    --ring: 200 98% 39%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom automotive system colors */
+    --electric-blue: 200 98% 39%;
+    --electric-blue-glow: 200 100% 60%;
+    --system-green: 120 60% 50%;
+    --system-green-glow: 120 70% 60%;
+    --warning-orange: 30 100% 50%;
+    --warning-orange-glow: 30 100% 70%;
+    --danger-red: 0 84% 60%;
+    --danger-red-glow: 0 100% 70%;
+    
+    /* Status colors */
+    --status-active: 120 60% 50%;
+    --status-warning: 30 100% 50%;
+    --status-error: 0 84% 60%;
+    --status-inactive: 240 4% 46%;
+    
+    /* Display colors */
+    --display-bg: 240 8% 8%;
+    --display-border: 200 50% 20%;
+    --display-text: 200 100% 80%;
+    
+    /* Gradients */
+    --gradient-electric: linear-gradient(135deg, hsl(var(--electric-blue)), hsl(var(--electric-blue-glow)));
+    --gradient-system: linear-gradient(135deg, hsl(var(--system-green)), hsl(var(--system-green-glow)));
+    --gradient-warning: linear-gradient(135deg, hsl(var(--warning-orange)), hsl(var(--warning-orange-glow)));
+    
+    /* Glows and shadows */
+    --glow-electric: 0 0 20px hsl(var(--electric-blue) / 0.5);
+    --glow-system: 0 0 20px hsl(var(--system-green) / 0.5);
+    --glow-warning: 0 0 20px hsl(var(--warning-orange) / 0.5);
+    
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease-out;
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +93,34 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Keep same dark theme as default since we're using dark automotive theme */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 240 5% 6%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 200 98% 39%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 240 5% 6%;
+    --muted-foreground: 240 4% 46%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 120 60% 50%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 240 6% 10%;
+    --input: 240 6% 10%;
+    --ring: 200 98% 39%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

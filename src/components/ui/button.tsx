@@ -15,6 +15,11 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        electric: "bg-electric text-white hover:bg-electric/90 shadow-lg hover:shadow-[var(--glow-electric)] transition-all duration-300",
+        system: "bg-system text-white hover:bg-system/90 shadow-lg hover:shadow-[var(--glow-system)] transition-all duration-300",
+        warning: "bg-warning text-white hover:bg-warning/90 shadow-lg hover:shadow-[var(--glow-warning)] transition-all duration-300",
+        danger: "bg-danger text-white hover:bg-danger/90 shadow-lg hover:shadow-[var(--glow-warning)] transition-all duration-300",
+        display: "bg-display-bg border border-display-border text-display-text font-mono hover:bg-display-bg/80",
       },
       size: {
         default: "h-10 px-4 py-2",
